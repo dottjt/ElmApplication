@@ -3,3 +3,60 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 
 // can add Boostrap overrides, additional Sass/CSS below...
+
+
+
+
+.application__title {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.todo__container {
+    display: flex;
+    justify-content: space-around;
+
+
+    .addtodo__container {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        max-height: 300px;
+        width: 300px;
+
+        label {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                font-weight: 100;
+            }
+        }
+    }
+
+    .todolist__container {
+        min-width: 300px;
+    }
+
+}
+
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+
+.todo__component__container {
+
+    input {
+        display: block;
+        position: relative;
+        top: 8px;
+        margin-right: 15px;        
+    }
+
+    .todo__checkbox__container {
+        display: flex;
+    }
+
+}
