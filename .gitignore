@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 elm-stuff/
 node_modules/
 tmp/
 dist/
 yarn.lock
 
+=======
+# elm-package generated files
+elm-stuff
+# elm-repl generated files
+repl-temp-*
+>>>>>>> 067c9b126a99db7aca763b12126efb642aac3b37

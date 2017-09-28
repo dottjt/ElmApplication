@@ -13,19 +13,36 @@ type alias TodoList = List Todo
 type alias Model =
     { todoList : TodoList
     , newEntry : Todo
+    , editEntry : Todo
     , error : String
+    , route : Route
     }
 
 
-initialModel : Model
-initialModel = 
+type Route
+  = IndexPage 
+  | IndividualTodoPage Int
+  | NotFoundRoute 
+
+
+
+-- Before, was just Model
+initialModel : Route -> Model
+initialModel route = 
     { todoList = []
     , newEntry = 
-      { id = 1
+      { id = 0
       , text = ""
       , title = ""  
       , completed = False       
       }
+    , editEntry =
+      { id = 0
+      , text = ""
+      , title = ""
+      , completed = False
+      }
     , error = ""
+    , route = route
     }
 

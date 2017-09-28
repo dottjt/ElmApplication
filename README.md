@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # elm-webpack-starter
 
 
@@ -105,3 +106,7 @@ npm run build
 * Use `html-webpack-plugin` to generate `index.html`
 * Apply hash filenames for bundled JS and CSS (prevents caching)
 * Image and favicon assets copied to `dist/`
+=======
+# ElmApplication
+Toy Elm Application, getting really quite good! 
+>>>>>>> 067c9b126a99db7aca763b12126efb642aac3b37
