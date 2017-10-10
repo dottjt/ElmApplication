@@ -1,8 +1,6 @@
-module Helper exposing (..)
+module Helper.UpdateHelper exposing (..)
 
 import Model exposing (..)
-
-
 
 
 -- ADD TODO HELPERS
@@ -92,8 +90,6 @@ asEditEntryIn =
 
 
 
-
-
 -- TODO COMPLETE HELPER
 
 setCompletedAtId : Int -> Todo -> Todo
@@ -103,3 +99,5 @@ setCompletedAtId todoID todo =
   else 
     todo
 
+
+  

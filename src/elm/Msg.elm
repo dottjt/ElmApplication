@@ -2,7 +2,7 @@ module Msg exposing (..)
 
 import Model exposing (Todo, TodoList)
 import Navigation exposing (Location)
-import Http exposing (..)
+import Http exposing (Error)
 
 
 type Msg 
@@ -20,12 +20,16 @@ type Msg
 
     | RemoveTodo Int
     | CompleteTodo Int
+    
+    | FetchTodoListFail Error
+    | FetchTodoListSuccess TodoList 
+    | FetchNewEntryFail Error 
+    | FetchNewEntrySuccess Todo 
 
-    | OnFetchTodoList (Result Error TodoList)
-    | OnFetchNewEntry (Result Error Todo)
-
-    | OnEditTodoList (Result Error Todo)
-    | OnAddTodoList (Result Error Todo)
+    | EditTodoListFail Error
+    | EditTodoListSuccess Todo
+    | AddTodoListFail Error
+    | AddTodoListSuccess Todo
 
     | OnLocationChange Location
 

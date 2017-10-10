@@ -2,7 +2,8 @@ module Update exposing (..)
 
 import Model exposing (..)
 import Msg exposing (..)
-import Helper exposing (..)
+import Helper.UpdateHelper exposing (..)
+import Helper.HttpHelper exposing (..)
 import Command exposing (..)
 
 import Random exposing (int, initialSeed, generate) 
@@ -84,23 +85,30 @@ update msg model =
 
         -- JSON RETRIEVE (GET) UPDATES 
 
-        OnFetchTodoList result ->
-            case result of 
-                Ok response ->
-                  { model | todoList = response } ! []
+        FetchTodoListSuccess response ->
+            { model | todoList = response } ! []
 
-                Err error ->
-                  { model | error = toString error } ! []
+        FetchTodoListFail error ->
+            { model | error = toString error } ! []
 
 
-        OnFetchNewEntry result ->
-            case result of 
-                Ok response ->
-                  { model | newEntry = response } ! []
+        FetchNewEntryFail response ->
+             { model | newEntry = response } ! []
 
-                Err error ->
-                  { model | error = toString error } ! []
+        FetchNewEntrySuccess error ->
+             { model | error = toString error } ! []
 
+
+        EditTodoListFail error ->
+             { model | error = toString error } ! []
+
+        EditTodoListSuccess response ->
+
+
+        AddTodoListFail error ->
+             { model | error = toString error } ! []
+
+        AddTodoListSuccess response -> 
 
 
         -- Post List 
